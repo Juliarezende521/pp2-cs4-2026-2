@@ -10,7 +10,7 @@ import type { UpdateCustomerDto } from "../dto/customer/updateCustomerDto.ts";
 import { NotFoundError } from "../errors/NotFoundError";
 
 
-export async function findAll(): Promise<Customer[]> {
+export async function findAll(): Promise<Customer[]> {git add .
  return repository.findAll();
 }
 
