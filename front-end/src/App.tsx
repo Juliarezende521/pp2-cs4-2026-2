@@ -3,6 +3,7 @@ import { BrowserRouter, NavLink, Routes, Route } from 'react-router'
 import { Homepage } from './components/Homepage'
 import { CustomersList } from './components/CustomersList'
 import { CarsList } from './components/CarsList'
+import { CustomersForm } from './components/CustomersForm'
 
 
 function App() {
@@ -30,14 +31,15 @@ function App() {
                Clientes
              </NavLink>
            </li>
-         </ul>
-       </div>
-     </nav>
+
            <li className="nav-item">
              <NavLink to="/cars" className="nav-link">
                Veículos
              </NavLink>
            </li>
+         </ul>
+       </div>
+     </nav>
 
 
      <main className="container py-4">
@@ -58,6 +60,12 @@ function App() {
            path="/customers"
            element={<CustomersList />}
          />
+         <Route
+           path="/customers/:id"
+           element={<CustomersForm />}
+         />
+
+
          <Route path="/cars" element={<CarsList />} />
 
        </Routes>
@@ -68,4 +76,3 @@ function App() {
 
 
 export default App
-
