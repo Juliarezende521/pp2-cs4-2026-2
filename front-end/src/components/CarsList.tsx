@@ -1,3 +1,10 @@
+import { Link } from "react-router";
+
+<div className="text-end mb-3">
+  <Link to="/cars/new" className="btn btn-outline-primary">
+    Novo veículo
+  </Link>
+</div>
 
 export function CarsList() {
  return (
